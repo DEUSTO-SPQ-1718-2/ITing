@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/botonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="OK" />
+
+    <EditText
+        android:id="@+id/cajaDialogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cajaNum"
+        android:layout_marginBottom="34dp"
+        android:width="600dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="¿Cuántos eCamareros va a haber?"
+        tools:text="¿Cuántos eCamareros va a haber?"
+        tools:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/cajaNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/botonOK"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:inputType="number" />
+</RelativeLayout>
