@@ -1,18 +1,26 @@
 package com.example.usuario.integrationmaps;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * Created by Martín Beitia on 17/10/2017.
  */
 
 public class eCamareros extends AppCompatActivity {
+
 
     Button ok_bn;
     Integer numero;
@@ -39,6 +47,11 @@ public class eCamareros extends AppCompatActivity {
                     builder.setMessage("Rellene el campo con un valor correcto");
                     displayAlert("input_error");
                 }else{
+                    Intent intent = new Intent(eCamareros.this, MailsPagadores.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("numero", numero);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
 
                 }
             }
