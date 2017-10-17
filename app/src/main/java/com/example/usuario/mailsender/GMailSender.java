@@ -1,5 +1,10 @@
 package com.example.usuario.mailsender;
 
+import android.accounts.AccountManager;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+
 import java.security.Security;
 import java.util.Properties;
 
@@ -27,21 +32,23 @@ public class GMailSender extends javax.mail.Authenticator {
     }
 
     public GMailSender(String user, String password){
-        this.user = user;
-        this.password = password;
+//        this.user = user;
+//        this.password = password;
+//
+//        Properties props = new Properties();
+//        props.setProperty("mail.transport.protocol", "smtp");
+//        props.setProperty("mail.host", mailhost);
+//        props.put("mail.smtp.auth", "true");
+//        props.put("mail.smtp.port", "465");
+//        props.put("mail.smtp.socketFactory.port", "465");
+//        props.put("mail.smtp.socketFactory.class",
+//                "javax.net.ssl.SSLSocketFactory");
+//        props.put("mail.smtp.socketFactory.fallback", "false");
+//        props.setProperty("mail.smtp.quitwait", "false");
+//
+//        session = Session.getDefaultInstance(props, this);
 
-        Properties props = new Properties();
-        props.setProperty("mail.transport.protocol", "smtp");
-        props.setProperty("mail.host", mailhost);
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.port", "465");
-        props.put("mail.smtp.socketFactory.port", "465");
-        props.put("mail.smtp.socketFactory.class",
-                "javax.net.ssl.SSLSocketFactory");
-        props.put("mail.smtp.socketFactory.fallback", "false");
-        props.setProperty("mail.smtp.quitwait", "false");
 
-        session = Session.getDefaultInstance(props, this);
     }
 
     protected PasswordAuthentication getPasswordAuthentication(){
