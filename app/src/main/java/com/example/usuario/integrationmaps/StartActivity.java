@@ -84,7 +84,7 @@ public class StartActivity extends AppCompatActivity {
                                             bundle.putString("email", jsonObject.getString("email"));
                                             intent.putExtras(bundle);
                                             startActivity(intent);
-                                        }
+                                    }
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
