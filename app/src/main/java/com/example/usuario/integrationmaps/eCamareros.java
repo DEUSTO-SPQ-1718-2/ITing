@@ -42,7 +42,7 @@ public class eCamareros extends AppCompatActivity {
             public void onClick(View view) {
                 numero = Integer.parseInt(valor.getText().toString());
 
-                if(numero<=0 || !(numero instanceof Integer)){
+                if(numero<=0 || !(numero instanceof Integer) || valor.getText().toString().equals("")){
                     builder.setTitle("Algo fue mal...");
                     builder.setMessage("Rellene el campo con un valor correcto");
                     displayAlert("input_error");

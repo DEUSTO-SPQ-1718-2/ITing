@@ -12,4 +12,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="112dp"
         android:text="Indique las direcciones de correo de los eCamareros" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:text="OK" />
 </LinearLayout>
