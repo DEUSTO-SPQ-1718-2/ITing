@@ -10,8 +10,12 @@ import java.util.Properties;
 
 import javax.activation.DataHandler;
 import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.NoSuchProviderException;
 import javax.mail.PasswordAuthentication;
+import javax.mail.Provider;
 import javax.mail.Session;
+import javax.mail.Store;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
@@ -22,16 +26,11 @@ import javax.mail.util.ByteArrayDataSource;
  */
 
 public class GMailSender extends javax.mail.Authenticator {
-    private String mailhost = "smtp.gmail.com";
-    private String user;
-    private String password;
+
     private Session session;
 
-    static{
-        Security.addProvider(new JSSEProvider());
-    }
+    public GMailSender(String user){
 
-    public GMailSender(String user, String password){
 //        this.user = user;
 //        this.password = password;
 //
@@ -48,11 +47,31 @@ public class GMailSender extends javax.mail.Authenticator {
 //
 //        session = Session.getDefaultInstance(props, this);
 
+        Properties props = new Properties();
+        props.setProperty("mail.transport.protocol", "imap");
+        props.setProperty("mail.host", "imap.gmail.com");
+        props.put("mail.imap.port", "993");
+        props.put("mail.imap.ssl.enable", "true"); // required for Gmail
+        props.put("mail.imap.auth.mechanisms", "XOAUTH2");
 
-    }
+        session = Session.getInstance(props);
+        Store store = null;
+        try {
+            store = session.getStore("imap");
+        } catch (NoSuchProviderException e) {
+            e.printStackTrace();
+        }
 
-    protected PasswordAuthentication getPasswordAuthentication(){
-        return new PasswordAuthentication(user, password);
+        if(store != null){
+
+            try {
+                store.connect("imap.gmail.com", user, "ya29.GlvnBPRDHOehywT7kH3Y4LzoriMVb2jajuP-XdqHwwE3ZvOFblkIEhYUKHSHFRduXdptxsAtYHsJh-xUrGb27-1jWQpm-uazU5g_nEFycTjvSLR3MhpxiskjBcFN");
+                // Token expired, need to refresh it
+            } catch (MessagingException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public synchronized void sendMail(String subject, String body, String sender, String recipients) throws Exception {

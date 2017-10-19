@@ -15,7 +15,7 @@ public class MailSender {
     public boolean funciona(){
 
         try{
-            GMailSender sender = new GMailSender("noreply.iting@gmail.com", "ItingPrueba14");
+            GMailSender sender = new GMailSender("noreply.iting@gmail.com");
             sender.sendMail("Asunto", "<b>Cuerpoo</b>", "noreply.iting@gmail.com", "asier.elorza@opendeusto.es,axi.elorza15@gmail.com");
             return true;
         } catch (Exception e){

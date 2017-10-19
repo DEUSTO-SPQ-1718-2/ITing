@@ -19,12 +19,12 @@ public class MailSender2 extends Activity {
         Bundle options = new Bundle();
 
 //        am.getAuthToken(
-//                am.getAccountsByType(null),  // Account retrieved using getAccountsByType()
+//                am.getAccountsByType("com.google"),  // Account retrieved using getAccountsByType()
 //                "Manage your tasks",            // Auth scope
 //                options,                        // Authenticator-specific options
 //                this,                           // Your activity
 //                new onTokenAcquired(),          // Callback called when a token is successfully acquired
-//                new Handler(new OnError()));    // Callback called if an error occurs
+//                new Handler()).getResult().getString(AccountManager.KEY_AUTHTOKEN);    // Callback called if an error occurs
     }
 
 }
