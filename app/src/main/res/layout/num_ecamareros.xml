@@ -11,7 +11,7 @@
         android:layout_centerVertical="true"
         android:text="OK" />
 
-    <EditText
+    <TextView
         android:id="@+id/cajaDialogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,6 +21,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="¿Cuántos eCamareros va a haber?"
+        android:textAlignment="center"
         tools:text="¿Cuántos eCamareros va a haber?"
         tools:textAlignment="center" />
 
