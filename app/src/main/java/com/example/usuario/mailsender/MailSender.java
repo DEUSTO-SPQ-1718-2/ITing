@@ -16,6 +16,7 @@ public class MailSender {
     public boolean funciona(){
 
         try{
+
             GMailSender sender = new GMailSender("noreply.iting@gmail.com", "ItingPrueba14");
 
             String body = "<div><img src=\"cid:image\"></div>" +
@@ -28,6 +29,7 @@ public class MailSender {
                     "<p><em><span style=\"font-size:16px;\">Equipo de Iting</span></em></p></div>";
 
             sender.sendMail("[Iting] nombre del emisor te ha invitado a comer", body, "noreply.iting@gmail.com", "asier.elorza@opendeusto.es");
+
             return true;
         } catch (Exception e){
             e.printStackTrace();

@@ -33,6 +33,7 @@ import javax.mail.util.ByteArrayDataSource;
 
 public class GMailSender extends javax.mail.Authenticator {
 
+
     private String mailhost = "smtp.gmail.com";
     private String user;
     private String password;
@@ -42,7 +43,7 @@ public class GMailSender extends javax.mail.Authenticator {
         Security.addProvider(new JSSEProvider());
     }
 
-    public GMailSender(String user, String password){
+    public GMailSender(String user, String password) {
 
         this.user = user;
         this.password = password;
@@ -59,12 +60,13 @@ public class GMailSender extends javax.mail.Authenticator {
         props.setProperty("mail.smtp.quitwait", "false");
 
         session = Session.getDefaultInstance(props, this);
-
-
     }
+
 
     protected PasswordAuthentication getPasswordAuthentication() {
         return new PasswordAuthentication(user, password);
+
+
     }
 
     public synchronized void sendMail(String subject, String body, String sender, String recipients) throws Exception {
