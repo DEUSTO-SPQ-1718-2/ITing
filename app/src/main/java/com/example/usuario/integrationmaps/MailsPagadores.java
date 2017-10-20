@@ -31,7 +31,7 @@ public class MailsPagadores extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         final int variable = bundle.getInt("numero");
 
-        parentLinearLayout = (LinearLayout) findViewById(R.id.contenedor_mails);
+        parentLinearLayout = (LinearLayout) findViewById(R.id.showCajas);
         aniadir_conbucle(variable);
 
         ok_bn.setOnClickListener(new View.OnClickListener() {
