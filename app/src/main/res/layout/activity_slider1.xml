@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.usuario.integrationmaps.SliderActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrola"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/restaur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/screenshot"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:adjustViewBounds="true"
+                android:background="@color/black"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="0dp">
+
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/separador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical"
+
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/rest_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.83"
+                    android:baselineAligned="false"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/nombre"
+                        android:layout_width="117dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="sans-serif"
+                        android:inputType="textPersonName"
+                        android:text="Name"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/puntuacion"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:id="@+id/valoracion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="TextView"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/imageView6"
+                            android:layout_toEndOf="@+id/imageView6" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="TextView"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:id="@+id/importe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/imageView8"
+                            android:layout_toRightOf="@+id/imageView8"
+                            android:text="TextView" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="25dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/precio"
+                            android:layout_marginLeft="38dp"
+                            android:layout_marginStart="38dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@+id/valoracion"
+                            android:layout_toEndOf="@+id/valoracion" />
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ubicacion"
+                            android:layout_marginRight="13dp"
+                            android:layout_marginEnd="13dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toLeftOf="@+id/textView2"
+                            android:layout_toStartOf="@+id/textView2" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+           <!-- <include
+                android:id="@+id/parent_linear_layout"
+                layout="@layout/activity_lay_men" />!-->
+
+            <RelativeLayout
+                android:id="@+id/jamon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/menufinal"
+                    android:layout_alignTop="@+id/parent_linear_layout"
+                    android:layout_alignBottom="@+id/parent_linear_layout" /> <!--https://stackoverflow.com/questions/11275897/how-to-make-image-fill-relativelayout-background-without-stretching!-->
+
+                <LinearLayout
+                    android:id="@+id/parent_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:src="@drawable/menufinal"></LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin">
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:map="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="169dp"
+                    android:layout_marginTop="20dp"
+                    tools:context="com.example.usuario.integrationmaps.SliderActivity" />
+
+                <ImageView
+                    android:id="@+id/transparent_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="169dp"
+                    android:src="@color/transparent" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+      </ScrollView>
+
+  </LinearLayout>

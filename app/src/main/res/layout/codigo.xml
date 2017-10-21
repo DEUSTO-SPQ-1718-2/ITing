@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocodigo">
+
+    <EditText
+        android:id="@+id/primero"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/tercero"
+        android:layout_alignLeft="@+id/cuarto"
+        android:layout_alignStart="@+id/cuarto"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/meternum"
+        android:ems="10"
+        android:hint="---"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:maxLength="1"/>
+
+    <EditText
+        android:id="@+id/tercero"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="144dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:background="@drawable/meternum"
+        android:ems="10"
+        android:hint="---"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:maxLength="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout2">
+
+        <EditText
+            android:id="@+id/segundo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="148dp"
+            android:background="@drawable/meternum"
+            android:ems="10"
+            android:hint="---"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:maxLength="1"/>
+
+        <EditText
+            android:id="@+id/quinto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignLeft="@+id/segundo"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/segundo"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/meternum"
+            android:ems="10"
+            android:hint="---"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:maxLength="1"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/cuarto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/meternum"
+        android:ems="10"
+        android:hint="---"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:maxLength="1"/>
+
+    <EditText
+        android:id="@+id/sexto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/meternum"
+        android:ems="10"
+        android:hint="---"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:maxLength="1"/>
+
+    <Button
+        android:id="@+id/checkear"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/botonsig"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/tercero"
+        android:layout_alignEnd="@+id/tercero"
+        android:layout_marginTop="18dp" />
+
+</RelativeLayout>
